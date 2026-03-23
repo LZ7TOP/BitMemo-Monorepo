@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "BitMemo (像素记)",
+  "version": "2.4.2",
+  "description": "快捷便签 - 浮动窗口，随处记录，一键链接",
+  "permissions": ["storage", "tabs", "contextMenus"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"],
+      "css": ["css/content.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/icons/*.png", "assets/fonts/*.ttf", "popup.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}

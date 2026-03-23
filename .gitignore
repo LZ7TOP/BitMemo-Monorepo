@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+.pnpm-debug.log*
+
+# Build Artifacts
+dist/
+release/
+out/
+
+# Environment
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Development
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

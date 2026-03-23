@@ -1,0 +1,13 @@
+{
+  "name": "bitmemo-monorepo",
+  "private": true,
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build",
+    "build:ext": "pnpm --filter extension build",
+    "install:all": "pnpm install"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.4"
+  }
+}
