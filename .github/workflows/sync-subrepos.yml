@@ -22,7 +22,7 @@ jobs:
           source-directory: 'apps/extension'
           destination-github-username: 'LZ7TOP'
           destination-repository-name: 'BitMemo'
-          user-email: LZ7TOP@users.noreply.github.com
+          user-email: garcia1004@163.com
           target-branch: main
 
   sync-website:
@@ -41,5 +41,5 @@ jobs:
           source-directory: 'apps/web'
           destination-github-username: 'LZ7TOP'
           destination-repository-name: 'BitMemo-Web'
-          user-email: LZ7TOP@users.noreply.github.com
+          user-email: garcia1004@163.com
           target-branch: main
