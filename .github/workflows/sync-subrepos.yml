@@ -24,6 +24,7 @@ jobs:
           destination-repository-name: 'BitMemo'
           user-email: garcia1004@163.com
           target-branch: main
+          commit-message: ${{ github.event.head_commit.message }}
 
   sync-website:
     runs-on: ubuntu-latest
@@ -43,3 +44,4 @@ jobs:
           destination-repository-name: 'BitMemo-Web'
           user-email: garcia1004@163.com
           target-branch: main
+          commit-message: ${{ github.event.head_commit.message }}
