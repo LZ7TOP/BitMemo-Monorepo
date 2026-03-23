@@ -1,0 +1,45 @@
+name: Sync Sub-Repositories
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-extension:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to Extension Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.SYNC_PAT }}
+        with:
+          source-directory: 'apps/extension'
+          destination-github-username: 'LZ7TOP'
+          destination-repository-name: 'BitMemo'
+          user-email: LZ7TOP@users.noreply.github.com
+          target-branch: main
+
+  sync-website:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to Website Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.SYNC_PAT }}
+        with:
+          source-directory: 'apps/web'
+          destination-github-username: 'LZ7TOP'
+          destination-repository-name: 'BitMemo-Web'
+          user-email: LZ7TOP@users.noreply.github.com
+          target-branch: main
