@@ -55,7 +55,7 @@ git push origin main
 
 1. **自动提取**: 它会自动提取 `apps/extension` 的变动并推送到 `LZ7TOP/BitMemo`。
 2. **自动提取**: 它会自动提取 `apps/web` 的变动并推送到 `LZ7TOP/BitMemo-Web`。
-3. **镜像提交**: 小仓库中会看到一条类似 `Update from BitMemo-Monorepo/commit/[hash]` 的提交记录。
+3. **镜像提交**: 子仓库会直接继承你在主仓库中写的 Commit Message，保持开发记录的连贯性（看起来更像是一个普通的独立仓库提交）。
 
 ---
 

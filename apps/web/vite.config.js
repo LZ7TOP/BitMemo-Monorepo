@@ -10,7 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const getLatestChangelog = () => {
   try {
     const content = fs.readFileSync(
-      path.resolve(__dirname, "../CHANGELOG.md"),
+      path.resolve(__dirname, "../extension/CHANGELOG.md"),
       "utf-8",
     );
     const sections = content.split("## [").slice(1, 4); // Get top 3
@@ -32,7 +32,10 @@ const getLatestChangelog = () => {
 
 // Read version from extension manifest
 const manifest = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../manifest.json"), "utf-8"),
+  fs.readFileSync(
+    path.resolve(__dirname, "../extension/manifest.json"),
+    "utf-8",
+  ),
 );
 
 // https://vite.dev/config/
